@@ -44,7 +44,7 @@ func (t *Task) CreateTask() (*Task, error) {
 	return t, err
 }
 
-func GetById(id int64) (*Task, error) {
+func GetTaskById(id int64) (*Task, error) {
 	var task Task
 	// db.First(&task, "id = ? ", id)
 	// db.First(&task, id)
@@ -53,7 +53,7 @@ func GetById(id int64) (*Task, error) {
 	return &task, err
 }
 
-func GetAll() ([]Task, error) {
+func GetAllTasks() ([]Task, error) {
 	var tasks []Task
 
 	err := db.Find(&tasks).Error
